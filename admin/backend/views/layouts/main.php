@@ -31,7 +31,12 @@ AppAsset::register($this);
 
         <!-- page specific plugin styles -->
 
+        <link rel="stylesheet" href="public/assets/css/jquery-ui-1.10.3.full.min.css" />
+        <link rel="stylesheet" href="public/assets/css/datepicker.css" />
+        <link rel="stylesheet" href="public/assets/css/ui.jqgrid.css" />
+
         <!-- fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
         <!-- ace styles -->
 
         <link rel="stylesheet" href="public/assets/css/ace.min.css" />
@@ -54,6 +59,62 @@ AppAsset::register($this);
         <script src="assets/js/html5shiv.js"></script>
         <script src="assets/js/respond.min.js"></script>
         <![endif]-->
+
+        <script src="public/assets/js/jquery-2.0.3.min.js"></script>
+
+        <!-- <![endif]-->
+
+        <!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+        <!--[if !IE]> -->
+
+        <script type="text/javascript">
+            window.jQuery || document.write("<script src='public/assets/js/jquery-2.0.3.min.js'>"+"<"+"script>");
+        </script>
+
+        <!-- <![endif]-->
+
+        <!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"script>");
+</script>
+<![endif]-->
+
+        <script type="text/javascript">
+            if("ontouchend" in document) document.write("<script src='public/assets/js/jquery.mobile.custom.min.js'>"+"<"+"script>");
+        </script>
+        <script src="public/assets/js/bootstrap.min.js"></script>
+        <script src="public/assets/js/typeahead-bs2.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+        <!-- 分类列表样式begin -->
+        <script src="public/assets/js/date-time/bootstrap-datepicker.min.js"></script>
+        <script src="public/assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+        <script src="public/assets/js/jqGrid/i18n/grid.locale-en.js"></script>
+        <!-- 分类列表样式end -->
+        <!--[if lte IE 8]>
+          <script src="assets/js/excanvas.min.js"></script>
+        <![endif]-->
+
+        <script src="public/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="public/assets/js/jquery.ui.touch-punch.min.js"></script>
+        <script src="public/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="public/assets/js/jquery.easy-pie-chart.min.js"></script>
+        <script src="public/assets/js/jquery.sparkline.min.js"></script>
+        <script src="public/assets/js/flot/jquery.flot.min.js"></script>
+        <script src="public/assets/js/flot/jquery.flot.pie.min.js"></script>
+        <script src="public/assets/js/flot/jquery.flot.resize.min.js"></script>
+
+        <!-- ace scripts -->
+
+
+
+        <script src="public/assets/js/ace-elements.min.js"></script>
+        <script src="public/assets/js/ace.min.js"></script>
+
+        <!-- inline scripts related to this page -->
     </head>
 
     <body>
@@ -163,14 +224,14 @@ AppAsset::register($this);
 
                             <ul class="submenu">
                                 <li>
-                                    <a href="release.html">
+                                    <a href="<?=Url::toRoute(['Gift/add'])?>">
                                         <i class="icon-double-angle-right"></i>
                                         添加礼物
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="record.html">
+                                    <a href="<?=Url::toRoute(['Gift/list'])?>">
                                         <i class="icon-double-angle-right"></i>
                                         礼物列表
                                     </a>
@@ -188,14 +249,14 @@ AppAsset::register($this);
 
                             <ul class="submenu">
                                 <li>
-                                    <a href="<?=Url::toRoute(['type/add'])?>">
+                                    <a href="<?=Url::toRoute(['cat/add'])?>">
                                         <i class="icon-double-angle-right"></i>
                                         分类添加
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="<?=Url::toRoute(['type/show'])?>">
+                                    <a href="<?=Url::toRoute(['cat/show'])?>">
                                         <i class="icon-double-angle-right"></i>
                                         分类列表
                                     </a>
@@ -232,26 +293,64 @@ AppAsset::register($this);
                         <li>
                             <a href="#" class="dropdown-toggle">
                                 <i class="icon-edit"></i>
-                                <span class="menu-text">  </span>
+                                <span class="menu-text">管理员权限</span>
 
                                 <b class="arrow icon-angle-down"></b>
                             </a>
 
                             <ul class="submenu">
                                 <li>
-                                    <a href="form-elements.html">
+                                    <a href="<?=Url::toRoute(['rbac/add'])?>">
                                         <i class="icon-double-angle-right"></i>
-                                        发布公告
+                                        用户权限设置
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="form-wizard.html">
+                                    <a href="<?=Url::toRoute(['rbac/list'])?>">
                                         <i class="icon-double-angle-right"></i>
-                                        进入论坛
+                                        用户列表
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#" class="dropdown-toggle">
+                                <i class="icon-edit"></i>
+                                <span class="menu-text">权限管理</span>
+
+                                <b class="arrow icon-angle-down"></b>
+                            </a>
+
+                            <ul class="submenu">
+                                <li>
+                                    <a href="<?=Url::toRoute(['rbac/role_add'])?>">
+                                        <i class="icon-double-angle-right"></i>
+                                        添加角色
                                     </a>
                                 </li>
 
+                                <li>
+                                    <a href="<?=Url::toRoute(['rbac/role_list'])?>">
+                                        <i class="icon-double-angle-right"></i>
+                                        角色列表
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="<?=Url::toRoute(['rbac/rbac_add'])?>">
+                                        <i class="icon-double-angle-right"></i>
+                                        添加权限
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="<?=Url::toRoute(['rbac/rbac_list'])?>">
+                                        <i class="icon-double-angle-right"></i>
+                                        权限列表
+                                    </a>
+                                </li>
                             </ul>
                         </li>
 
@@ -266,17 +365,25 @@ AppAsset::register($this);
                     </script>
                 </div>
 
+                <div class="main-content">
+                    <div class="breadcrumbs" id="breadcrumbs">
+                        <script type="text/javascript">
+                            try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+                        </script>
+
+                        <ul class="breadcrumb">
+                            <li>
+                                <i class="icon-home home-icon"></i>
+                                <a href="#">首页</a>
+                            </li>
+                <!-- 页面内容 -->
                 <?=$content?>
 
 
 
 
 
-                                <!-- PAGE CONTENT ENDS -->
-                            </div><!-- /.col -->
-                        </div><!-- /.row -->
-                    </div><!-- /.page-content -->
-                </div><!-- /.main-content -->
+
 
                 <div class="ace-settings-container" id="ace-settings-container">
                     <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
@@ -336,57 +443,13 @@ AppAsset::register($this);
 
         <!--[if !IE]> -->
 
-        <script src="public/assets/js/jquery-2.0.3.min.js"></script>
 
-        <!-- <![endif]-->
-
-        <!--[if IE]>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<![endif]-->
-
-        <!--[if !IE]> -->
 
         <script type="text/javascript">
-            window.jQuery || document.write("<script src='public/assets/js/jquery-2.0.3.min.js'>"+"<"+"script>");
-        </script>
 
-        <!-- <![endif]-->
 
-        <!--[if IE]>
-<script type="text/javascript">
- window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"script>");
-</script>
-<![endif]-->
 
-        <script type="text/javascript">
-            if("ontouchend" in document) document.write("<script src='public/assets/js/jquery.mobile.custom.min.js'>"+"<"+"script>");
-        </script>
-        <script src="public/assets/js/bootstrap.min.js"></script>
-        <script src="public/assets/js/typeahead-bs2.min.js"></script>
-
-        <!-- page specific plugin scripts -->
-
-        <!--[if lte IE 8]>
-          <script src="assets/js/excanvas.min.js"></script>
-        <![endif]-->
-
-        <script src="public/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
-        <script src="public/assets/js/jquery.ui.touch-punch.min.js"></script>
-        <script src="public/assets/js/jquery.slimscroll.min.js"></script>
-        <script src="public/assets/js/jquery.easy-pie-chart.min.js"></script>
-        <script src="public/assets/js/jquery.sparkline.min.js"></script>
-        <script src="public/assets/js/flot/jquery.flot.min.js"></script>
-        <script src="public/assets/js/flot/jquery.flot.pie.min.js"></script>
-        <script src="public/assets/js/flot/jquery.flot.resize.min.js"></script>
-
-        <!-- ace scripts -->
-
-        <script src="public/assets/js/ace-elements.min.js"></script>
-        <script src="public/assets/js/ace.min.js"></script>
-
-        <!-- inline scripts related to this page -->
-
-        <script type="text/javascript">
+          // ===============================================================================
             jQuery(function($) {
                 $('.easy-pie-chart.percentage').each(function(){
                     var $box = $(this).closest('.infobox');

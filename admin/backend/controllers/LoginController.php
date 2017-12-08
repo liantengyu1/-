@@ -76,8 +76,8 @@ class LoginController extends Controller
                 $admin->password = md5($data['LoginForm']['password']);
 
                 if ($admin->save()) {
-                    $id = Yii::$app->db->getLastInsertID();
-                    
+                    // $id = Yii::$app->db->getLastInsertID();
+
                     return $this->redirect(['login/login']);
 
                }

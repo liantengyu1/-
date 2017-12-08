@@ -1,10 +1,13 @@
 <?php
 /* @var $this yii\web\View */
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
 ?>
 
 			<li class="active">直播后台控制台</li>
-			<li class="active">分类管理</li>
-			<li class="active">分类添加</li>
+			<li class="active">权限管理</li>
+			<li class="active">权限添加</li>
 		</ul><!-- .breadcrumb -->
 	</div>
 
@@ -14,10 +17,10 @@
 
 					<form class="form-horizontal" role="form" >
 					<div class="form-group">
-						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 权限 </label>
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 角色添加 </label>
 
 						<div class="col-sm-9">
-							<input type="text" id="form-field-1" placeholder="权限" class="col-xs-10 col-sm-5" />
+							<input type="text" id="form-field-1" placeholder="请输入角色名" class="col-xs-10 col-sm-5" />
 						</div>
 					</div>
 
