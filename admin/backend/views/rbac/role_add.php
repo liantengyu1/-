@@ -16,14 +16,14 @@ use yii\widgets\ActiveForm;
 			<div class="row">
 					<div class="col-xs-12">
 
-					
+					<?= Html::beginForm(['rbac/role_add'],'post')?>
 					<br>
 					<br>
 					<div class="form-group">
 						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 角色添加 </label>
 
 						<div class="col-sm-9">
-							<input type="text" id="form-field-1" placeholder="请输入角色名" class="col-xs-10 col-sm-5" />
+							<input type="text" name="role_name" id="form-field-1" placeholder="请输入角色名" class="col-xs-10 col-sm-5" />
 						</div>
 					</div>
 
@@ -34,10 +34,7 @@ use yii\widgets\ActiveForm;
 
 					<div class="clearfix form-actions">
 						<div class="col-md-offset-3 col-md-9">
-							<button class="btn btn-info" type="button">
-								<i class="icon-ok bigger-110"></i>
-								添加角色
-							</button>
+							<?= Html::submitButton('添加角色',['class' => 'btn btn-info'])?>
 
 							&nbsp; &nbsp; &nbsp;
 							<button class="btn" type="reset">
@@ -48,7 +45,7 @@ use yii\widgets\ActiveForm;
 					</div>
 
 
-				</form>
+				<?= Html::endForm();?>
 					</div><!-- /span -->
 				</div><!-- /row -->
 

@@ -4,7 +4,7 @@ namespace backend\controllers;
 
 use yii;
 
-
+use app\models\Role;
 
 /**
  * 权限
@@ -41,7 +41,14 @@ class RbacController extends CommonController
 
     		//处理添加
 
-    		echo 1;die;
+    		$role = new Role;
+
+    		$role->role_name = $data['role_name'];
+
+    		if($role->save()){
+    			return $this->redirect(['rbac/role_list']);
+    		}
+
     	}
 
 
@@ -51,7 +58,9 @@ class RbacController extends CommonController
     public function actionRole_list()
     {
 
-        return $this->render('add');
+    	$data['data'] = json_encode(Role::find()->asArray()->all());
+
+        return $this->render('role_list',$data);
     }
 
     /** 权限添加 */
