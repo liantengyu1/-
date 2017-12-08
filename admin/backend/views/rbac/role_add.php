@@ -7,8 +7,8 @@ use yii\widgets\ActiveForm;
 ?>
 
 			<li class="active">直播后台控制台</li>
-			<li class="active">权限管理</li>
-			<li class="active">权限添加</li>
+			<li class="active">角色管理</li>
+			<li class="active">角色添加</li>
 		</ul><!-- .breadcrumb -->
 	</div>
 
@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 			<div class="row">
 					<div class="col-xs-12">
 
-					<?= Html::beginForm(['rbac/role_add'],'post')?>
+					<?= Html::beginForm(['rbac/role_add'],'post',['class'=>'form-horizontal'])?>
 					<br>
 					<br>
 					<div class="form-group">

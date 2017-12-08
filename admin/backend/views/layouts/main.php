@@ -293,7 +293,7 @@ AppAsset::register($this);
                         <li>
                             <a href="#" class="dropdown-toggle">
                                 <i class="icon-edit"></i>
-                                <span class="menu-text">管理员权限</span>
+                                <span class="menu-text">角色管理</span>
 
                                 <b class="arrow icon-angle-down"></b>
                             </a>
@@ -302,14 +302,14 @@ AppAsset::register($this);
                                 <li>
                                     <a href="<?=Url::toRoute(['rbac/add'])?>">
                                         <i class="icon-double-angle-right"></i>
-                                        用户权限设置
+                                        用户角色设置
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="<?=Url::toRoute(['rbac/list'])?>">
                                         <i class="icon-double-angle-right"></i>
-                                        用户列表
+                                        角色列表
                                     </a>
                                 </li>
                             </ul>

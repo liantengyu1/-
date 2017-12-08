@@ -124,7 +124,7 @@
                 //navButtons
                 jQuery(grid_selector).jqGrid('navGrid',pager_selector,
                     {   //navbar options
-alert(1)
+
                         edit: true,
                         editicon : 'icon-pencil blue',
                         add: true,
@@ -246,6 +246,7 @@ alert(1)
                 }
 
                 function beforeDeleteCallback(e) {
+
                     var form = $(e[0]);
                     if(form.data('styled')) return false;
 
