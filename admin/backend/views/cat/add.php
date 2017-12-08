@@ -1,5 +1,8 @@
 <?php
-/* @var $this yii\web\View */
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use yii\helpers\Url;
+
 ?>
 
 			<li class="active">直播后台控制台</li>
@@ -12,12 +15,19 @@
 			<div class="row">
 					<div class="col-xs-12">
 
-					<form class="form-horizontal" role="form" >
+					<?=Html::beginForm(['cat/add'],'post', ['class' => 'form-horizontal']);?>
 					<div class="form-group">
 						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 分类名 </label>
 
 						<div class="col-sm-9">
-							<input type="text" id="form-field-1" placeholder="用户名" class="col-xs-10 col-sm-5" />
+							<input type="text" id="form-field-1" placeholder="分类名" name="name" class="col-xs-10 col-sm-5" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 排序 </label>
+
+						<div class="col-sm-9">
+							<input type="number" id="form-field-1" name="sort" min="0" class="col-xs-10 col-sm-5" />
 						</div>
 					</div>
 
@@ -29,12 +39,16 @@
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 所属上级分类 </label>
 
 										<div class="col-sm-9">
-											<select >
-												<option value="">&nbsp;</option>
-												<option value="TC">住宅</option>
-												<option value="GJ">商铺</option>
-												<option value="XL">写字楼</option>
-												<option value="HT">别墅</option>
+											<select name="parent_id">
+												<!-- <option value="">&nbsp;</option> -->
+												<?php if (empty($cateInfo)): ?>
+													<!-- 如果表空则显示分类为全部 父级id默认为0 -->
+														<option value="1">全部</option>
+													<?php else: ?>
+														<?php foreach ($cateInfo as $key => $value): ?>
+															<option value="<?=$value['id'] ?>"><?=str_repeat('--/',$value['lev']-1).$value['name'] ?></option>
+														<?php endforeach ?>
+												<?php endif ?>
 											</select>
 
 									    </div>
@@ -44,11 +58,8 @@
 
 					<div class="clearfix form-actions">
 						<div class="col-md-offset-3 col-md-9">
-							<button class="btn btn-info" type="button">
-								<i class="icon-ok bigger-110"></i>
-								添加分类
-							</button>
-
+							
+							<?= Html::submitButton('添加分类', ['class' => 'btn btn-info']) ?>
 							&nbsp; &nbsp; &nbsp;
 							<button class="btn" type="reset">
 								<i class="icon-undo bigger-110"></i>
@@ -58,7 +69,7 @@
 					</div>
 
 
-				</form>
+				<?=Html::endForm()?>
 					</div><!-- /span -->
 				</div><!-- /row -->
 

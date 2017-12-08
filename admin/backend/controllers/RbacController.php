@@ -66,7 +66,28 @@ class RbacController extends CommonController
     /** 权限添加 */
     public function actionRbac_add()
     {
-        return $this->render('add');
+        $data = yii::$app->request->post();
+
+    	if (empty($data)) {
+
+        	//展示角色添加页面
+
+        	return $this->render('rbac_add');
+
+    	}else{
+
+    		//处理添加
+
+    		$role = new Role;
+
+    		$role->rbac_name = $data['rbac_name'];
+    		$role->rbac_route = $data['rbac_route'];
+
+    		if($role->save()){
+    			return $this->redirect(['rbac/rbac_list']);
+    		}
+
+    	}
     }
 
     /** 权限展示操作 */

@@ -39,10 +39,7 @@
 </div><!-- /.main-content -->
 
 <script>
-	 var grid_data =
-            [
-                {id:"20",date:"70",name:"博山小区 63平，2室1厅，4/6层",note:"博山小区，内环宜居黄金地段，全明户型，房型正气，投资居家首选",stock:"Yes",ship:"定价", sdate:"2007-12-03"},
-        ];
+	 var grid_data =<?=$data ?>;
 
         jQuery(function($) {
                 var grid_selector = "#grid-table";
@@ -54,7 +51,7 @@
                     data: grid_data,
                     datatype: "local",
                     height: 400,
-                    colNames:[' 操作', '序列','发布时间','房源简介', '房源类型','发布天数','房源简介'],
+                    colNames:[' 操作', '序列', '分类名称', '父级分类', '排序'],
                     colModel:[
                         {name:'myac',index:'', width:80, fixed:true, sortable:false, resize:false,
                             formatter:'actions',
@@ -65,12 +62,10 @@
                             }
                         },
                         {name:'id',index:'id', width:60, sorttype:"int", editable: true},
-                        {name:'sdate',index:'sdate',width:90, editable:true, sorttype:"date",unformat: pickDate},
                         {name:'name',index:'name', width:150,editable: true,editoptions:{size:"20",maxlength:"30"}},
                         //{name:'stock',index:'stock', width:70, editable: true,edittype:"checkbox",editoptions: {value:"Yes:No"},unformat: aceSwitch},
-                        {name:'ship',index:'ship', width:90, editable: true,edittype:"select",editoptions:{value:"FE:定价;IN:合租;TN:全新;AR:二手"}},
-                        {name:'date',index:'date', width:150,editable: true,editoptions:{size:"20",maxlength:"30"}},
-                        {name:'note',index:'note', width:150, sortable:false,editable: true,edittype:"textarea", editoptions:{rows:"2",cols:"10"}}
+                        {name:'parent_id',index:'parent_id', width:90, editable: true,edittype:"select",editoptions:{value:"FE:定价;IN:合租;TN:全新;AR:二手"}},
+                        {name:'sort',index:'sort', width:90, editable: true,edittype:"select",editoptions:{value:"FE:定价;IN:合租;TN:全新;AR:二手"}}
                     ],
 
                     viewrecords : true,

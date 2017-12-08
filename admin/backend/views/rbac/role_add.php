@@ -7,8 +7,8 @@ use yii\widgets\ActiveForm;
 ?>
 
 			<li class="active">直播后台控制台</li>
-			<li class="active">权限管理</li>
-			<li class="active">权限添加</li>
+			<li class="active">角色管理</li>
+			<li class="active">角色添加</li>
 		</ul><!-- .breadcrumb -->
 	</div>
 
