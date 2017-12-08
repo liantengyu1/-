@@ -11,7 +11,7 @@ class IndexController extends CommonController
 
     public function actionIndex()
     {
-    	// 阿萨斯阿斯敖德萨
+    	// 阿萨斯阿斯敖德萨a
         return $this->render('index');
     }
 
