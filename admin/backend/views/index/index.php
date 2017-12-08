@@ -1,17 +1,8 @@
 <?php
 /* @var $this yii\web\View */
 ?>
-<div class="main-content">
-<div class="breadcrumbs" id="breadcrumbs">
-<script type="text/javascript">
-    try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
-</script>
 
-<ul class="breadcrumb">
-    <li>
-        <i class="icon-home home-icon"></i>
-        <a href="#">首页</a>
-    </li>
+
     <li class="active">后台管理控制台</li>
 </ul><!-- .breadcrumb -->
 </div>
