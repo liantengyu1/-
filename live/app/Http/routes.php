@@ -27,3 +27,4 @@ Route::get('a', function () {
     return view('show/a');
 
 });
+
