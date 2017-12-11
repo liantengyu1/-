@@ -22,9 +22,8 @@ Route::get('show', function () {
 
 });
 
-Route::get('a', function () {
+Route::get('login', function () {
 
-    return view('show/a');
+    return view('login/login');
 
 });
-
