@@ -1,4 +1,7 @@
 <?php
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use yii\helpers\Url;
 
 ?>
 
@@ -47,7 +50,7 @@
 
                 jQuery(grid_selector).jqGrid({
                     //direction: "rtl",
-
+                    
                     data: grid_data,
                     datatype: "local",
                     height: 400,
@@ -67,6 +70,7 @@
                         {name:'parent_id',index:'parent_id', width:90, editable: true,edittype:"select",editoptions:{value:"FE:定价;IN:合租;TN:全新;AR:二手"}},
                         {name:'sort',index:'sort', width:90, editable: true,edittype:"select",editoptions:{value:"FE:定价;IN:合租;TN:全新;AR:二手"}}
                     ],
+
 
                     viewrecords : true,
                     rowNum:10,
@@ -90,14 +94,14 @@
                         }, 0);
                     },
 
-                    editurl: $path_base+"/dummy.html",//nothing is saved
+                    editurl: $path_base+"<?=Url::toRoute(['cat/edit']) ?>",//nothing is saved
                     caption: "发布房源",
 
 
                     autowidth: true
 
                 });
-
+                // $.ajaxPrefilter(function( options, originalOptions, jqXHR ) { options.async = true; });
                 //enable search/filter toolbar
                 //jQuery(grid_selector).jqGrid('filterToolbar',{defaultSearch:true,stringResult:true})
 
@@ -111,6 +115,7 @@
                     }, 0);
                 }
                 //enable datepicker
+                //切换元素在编辑内联时
                 function pickDate( cellvalue, options, cell ) {
                     setTimeout(function(){
                         $(cell) .find('input[type=text]')
@@ -122,6 +127,7 @@
                 //navButtons
                 jQuery(grid_selector).jqGrid('navGrid',pager_selector,
                     {   //navbar options
+                        //导航选项
                         edit: true,
                         editicon : 'icon-pencil blue',
                         add: true,
@@ -137,7 +143,7 @@
                         viewicon : 'icon-zoom-in grey',
                     },
                     {
-                        //edit record form
+                        //edit record form  编辑记录形式
                         //closeAfterEdit: true,
                         recreateForm: true,
                         beforeShowForm : function(e) {
@@ -147,7 +153,7 @@
                         }
                     },
                     {
-                        //new record form
+                        //new record form 新记录表单
                         closeAfterAdd: true,
                         recreateForm: true,
                         viewPagerButtons: false,
@@ -158,7 +164,7 @@
                         }
                     },
                     {
-                        //delete record form
+                        //delete record form 删除记录表单
                         recreateForm: true,
                         beforeShowForm : function(e) {
                             var form = $(e[0]);
@@ -174,7 +180,7 @@
                         }
                     },
                     {
-                        //search form
+                        //search form  搜索表单
                         recreateForm: true,
                         afterShowSearch: function(e){
                             var form = $(e[0]);
@@ -279,6 +285,8 @@
 
                 //unlike navButtons icons, action icons in rows seem to be hard-coded
                 //you can change them like this in here if you want
+                //不像导航按钮图标，行中的动作图标看起来是硬编码的
+                //你可以在这里修改它们，如果你想的话
                 function updateActionIcons(table) {
                     /**
                     var replacement =
@@ -296,7 +304,7 @@
                     */
                 }
 
-                //replace icons with FontAwesome icons like above
+                //replace icons with FontAwesome icons like above 用类似于上面的图标来替换图标
                 function updatePagerIcons(table) {
                     var replacement =
                     {
