@@ -22,14 +22,16 @@ Route::get('show', function () {
 
 });
 
-Route::get('a', function () {
+Route::get('login', function () {
 
-    return view('show/a');
+    return view('login/login');
 
 });
 
+Route::get('index', function () {
 
+    return view('index/index');
 
+});
 
-
-
+Route::get('index', 'IndexController@index');
