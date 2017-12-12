@@ -142,7 +142,7 @@ AppAsset::register($this);
                                 <img class="nav-user-photo" src="public/assets/avatars/user.jpg" alt="Jason's Photo" />
                                 <span class="user-info">
                                     <small>欢迎光临,</small>
-                                    ADMIN
+                                    <?=Yii::$app->session['admin_id']['admin_name'] ?>
                                 </span>
 
                                 <i class="icon-caret-down"></i>
