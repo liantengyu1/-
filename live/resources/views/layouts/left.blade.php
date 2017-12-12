@@ -1,6 +1,6 @@
 
 
- <!--    <div class="more-loading">
+<!--     <div class="more-loading">
         <i class="icon-loading"></i>
         <em class="seo-loading">加载中...</em>
     </div>
@@ -20,7 +20,7 @@
             <li class="sidebar-icon-item">
                 <a href="{{Url('login/login')}}" title="订阅" target="_blank" eid="click/navi/zuoce/sub" eid_desc="点击/导航/左侧导航/我的订阅">
                     <i class="sidebar-icon-sub"></i>
-                    <span class="sidebar-title">订阅</span>
+                    <span class="sidebar-title">订</span>
                 </a>
             </li>
             <li class="sidebar-icon-item on">
