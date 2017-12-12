@@ -318,7 +318,7 @@ var _hmt = _hmt || [];
     <input name="password1" type="password" placeholder="确认密码：">
     <input name="username" type="text" placeholder="用户名：">
     <input type="hidden" name="title" value="">
-    <input type="hidden" name="url" value="">
+    <input type="hidden" name="url">
     <div class="clearfix"></div>
     <input type="button" name="type" class="button-blue reg" value="注册" data-category="UserAccount" data-action="regist">
     <ul class="third-parties">
