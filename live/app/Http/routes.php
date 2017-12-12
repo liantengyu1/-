@@ -25,3 +25,15 @@ Route::get('show', function () {
 
 Route::get('login/login','LoginController@login');
 
+<<<<<<< HEAD
+=======
+});
+
+Route::get('index', function () {
+
+    return view('index/index');
+
+});
+
+Route::get('index', 'IndexController@index');
+>>>>>>> 858bef804ab34b51ea944707a6ab200ee50ba49e

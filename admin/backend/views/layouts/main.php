@@ -142,7 +142,7 @@ AppAsset::register($this);
                                 <img class="nav-user-photo" src="public/assets/avatars/user.jpg" alt="Jason's Photo" />
                                 <span class="user-info">
                                     <small>欢迎光临,</small>
-                                    ADMIN
+                                    <?=Yii::$app->session['admin_id']['admin_name'] ?>
                                 </span>
 
                                 <i class="icon-caret-down"></i>
@@ -224,14 +224,14 @@ AppAsset::register($this);
 
                             <ul class="submenu">
                                 <li>
-                                    <a href="<?=Url::toRoute(['Gift/add'])?>">
+                                    <a href="<?=Url::toRoute(['gift/add'])?>">
                                         <i class="icon-double-angle-right"></i>
                                         添加礼物
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="<?=Url::toRoute(['Gift/list'])?>">
+                                    <a href="<?=Url::toRoute(['gift/list'])?>">
                                         <i class="icon-double-angle-right"></i>
                                         礼物列表
                                     </a>

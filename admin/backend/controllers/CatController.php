@@ -37,8 +37,13 @@ class CatController extends CommonController
 
     		// 获取全部分类数据
 			$arr = Cat::find()->asArray()->all();
+<<<<<<< HEAD
 		    //获取常规分类数组
 		    $cateInfo = $this->actionGetCatInfo($arr);
+=======
+		    //获取常规分类数组  
+		    $cateInfo = $this->actionGetCatInfo($arr);  
+>>>>>>> 858bef804ab34b51ea944707a6ab200ee50ba49e
 
 	        return $this->render('add',['cateInfo' => $cateInfo]);
     	}
@@ -58,7 +63,7 @@ class CatController extends CommonController
     /**
      * [actionGetCatInfo 无限极分类递归处理]
      * @param  [array]  $arr  [分类数据]
-     * @param  integer $p_id [父级di]
+     * @param  integer $p_id [父级id]
      * @param  integer $lev  [分类等级]
      * @return [array]        [description]
      */
@@ -77,7 +82,18 @@ class CatController extends CommonController
 
 	}
 
+<<<<<<< HEAD
 
+=======
+	public function actionEdit()
+	{
+
+		echo json_encode(1);die;
+
+	}
+
+	
+>>>>>>> 858bef804ab34b51ea944707a6ab200ee50ba49e
 
 
 
