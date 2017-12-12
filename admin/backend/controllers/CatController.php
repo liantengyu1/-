@@ -10,9 +10,9 @@ use app\models\Cat;
 class CatController extends CommonController
 {
 
-	public function actionIndex()  
-	{  
-		
+	public function actionIndex()
+	{
+
 	}
 
 	/** [actionAdd 添加分类] */
@@ -20,7 +20,7 @@ class CatController extends CommonController
     {
 
     	if ($_POST) {
-    			
+
     		// 接收数据
     		$data = yii::$app->request->post();
     		// 入库
@@ -37,9 +37,9 @@ class CatController extends CommonController
 
     		// 获取全部分类数据
 			$arr = Cat::find()->asArray()->all();
-		    //获取常规分类数组  
-		    $cateInfo = $this->actionGetCatInfo($arr);  
-		    
+		    //获取常规分类数组
+		    $cateInfo = $this->actionGetCatInfo($arr);
+
 	        return $this->render('add',['cateInfo' => $cateInfo]);
     	}
 
@@ -50,7 +50,7 @@ class CatController extends CommonController
     {
     	// 获取全部分类数据
 		$data = Cat::find()->asArray()->all();
-	   	 
+
         return $this->render('show',['data' => json_encode($data)]);
     }
 
@@ -62,9 +62,9 @@ class CatController extends CommonController
      * @param  integer $lev  [分类等级]
      * @return [array]        [description]
      */
-    public function actionGetCatInfo($arr,$p_id=0,$lev=1)  
-	{  
-    
+    public function actionGetCatInfo($arr,$p_id=0,$lev=1)
+	{
+
 	    $subs = array(); // 子孙数组
 		    foreach($arr as $v) {
 		        if($v['parent_id'] == $p_id) {
@@ -77,7 +77,7 @@ class CatController extends CommonController
 
 	}
 
-	
+
 
 
 
