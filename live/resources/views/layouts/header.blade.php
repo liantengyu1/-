@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> affc5825f367cf28b82e23b5a4740cb6f7372d16
 <html lang="zh-cmn-Hans"><!--<![endif]--><head><script src=""></script>
     <meta charset="utf-8">
 <title>在线直播_全部游戏直播_网络游戏直播&nbsp;-&nbsp;虎牙直播</title>
@@ -6,9 +10,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="热门游戏直播,高清游戏直播平台,电竞赛事直播,单机游戏直播,lol直播,dnf直播,吃货直播,娱乐直播厅,美女直播厅,电视台节目,虎牙直播huya">
 <meta name="Description" content="虎牙直播为您提供高清、流畅的视频直播和各种游戏赛事的直播平台，除了英雄联盟lol直播、地下城与勇士dnf直播、穿越火线cf直播等热门游戏直播，更有美女直播厅、电视台节目、娱乐美女直播厅等24小时免费的在线直播内容。">
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="{{URL::asset('public/css/bootstrap.min.css')}}">    
 
 <!-- <link rel="stylesheet" type="text/css" href="{{URL::asset('public/css/index.css')}}">   -->
+=======
+
+<link rel="stylesheet" type="text/css" href="{{URL::asset('public/static/css/ui2.css?2013032917')}}">
+>>>>>>> affc5825f367cf28b82e23b5a4740cb6f7372d16
 
 <link rel="canonical" href="http://www.huya.com/l">
     <link type="text/css" rel="stylesheet" href="{{URL::asset('public/extend/css/pages_modules_c10f635.css')}}">
@@ -68,6 +77,35 @@
                 <a target="_blank" href="#"><i class="hy-nav-home-icon"></i><span>公会入驻</span></a>
             </div>
         </div>
+<<<<<<< HEAD
+=======
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="more-loading">
+        <i class="icon-loading"></i>
+        <em class="seo-loading">加载中...</em>
+>>>>>>> 858bef804ab34b51ea944707a6ab200ee50ba49e
+>>>>>>> affc5825f367cf28b82e23b5a4740cb6f7372d16
     </div>
     <div class="hy-nav-right">
         <a class="hy-nav-title clickstat" href="http://www.huya.com/download/" eid="click/navi/download" eid_desc="点击/导航/下载" target="_blank">
@@ -110,10 +148,97 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> affc5825f367cf28b82e23b5a4740cb6f7372d16
     <div class="hy-nav-right hy-nav-history">
         <a class="hy-nav-title nav-history new-clickstat" id="nav-history" href="http://i.huya.com/index.php?m=Subscribe&amp;watch=1" target="_blank" report="{&quot;eid&quot;:&quot;click/position&quot;,&quot;position&quot;:&quot;click/navi/lishi&quot;}">
             <i class="hy-nav-icon hy-nav-history-icon"></i>
             <span class="title">历史</span>
+<<<<<<< HEAD
+=======
+        </a>
+        <div class="nav-expand-list nav-expand-history">
+            <i class="arrow"></i>
+            <div class="load-history">
+                <div class="mod-list-more">
+                    <div class="more-loading">
+                        <i class="icon-loading"></i>
+                        <em>正在加载您的历史...</em>
+                    </div>
+                </div>
+            </div>
+            <a href="http://i.huya.com/index.php?m=Subscribe&amp;watch=1" class="nav-expand-history-more J_gNavLogin" style="display:none" target="_blank">更多&gt;</a>
+        </div>
+    </div>
+    <div class="hy-nav-right un-login" style="display: block;">
+        <div class="hy-nav-title">
+            <i class="hy-nav-icon hy-nav-login-icon"></i>
+            <div class="un-login-btn">
+                <a class="clickstat" id="nav-login" href="#" eid="click/navi/sign" eid_desc="点击/导航/登录">登录</a>
+                <i>|</i>
+                <a class="clickstat" id="nav-regiest" href="#" eid="click/navi/login" eid_desc="点击/导航/注册">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="hy-nav-right nav-user success-login">
+        <a class="nav-user-title" href="http://i.huya.com/" target="_blank">
+            <img id="login-userAvatar" src="//a.msstatic.com/huya/main/img/10001.jpg" alt="头像">
+            <span id="login-username"></span>
+=======
+    <div class="mod-sidebar">
+    <div class="sidebar-hide">
+        <ul class="sidebar-icon-list">
+            <li class="sidebar-icon-item">
+                <a class="sidebar-icon-link clickstat js-sub" href="http://i.huya.com/index.php?m=Subscribe" title="订阅" target="_blank" eid="click/navi/zuoce/sub" eid_desc="点击/导航/左侧导航/我的订阅">
+                    <i class="sidebar-icon-sub"></i>
+                    <span class="sidebar-title">订阅</span>
+                </a>
+            </li>
+            <li class="sidebar-icon-item on">
+                <a class="sidebar-icon-link clickstat" href="http://www.huya.com/l" title="直播" eid="click/navi/zuoce/live" eid_desc="点击/导航/左侧导航/全部直播">
+                    <i class="sidebar-icon-live"></i>
+                    <span class="sidebar-title">直播</span>
+                </a>
+            </li>
+            <li class="sidebar-icon-item">
+                <a class="sidebar-icon-link clickstat" href="http://www.huya.com/g" title="分类" eid="click/navi/zuoce/gametype" eid_desc="点击/导航/左侧导航/全部游戏">
+                    <i class="sidebar-icon-type"></i>
+                    <span class="sidebar-title">分类</span>
+                </a>
+            </li>
+                        <li class="sidebar-icon-item ">
+                <a class="sidebar-icon-link clickstat" href="http://www.huya.com/g/100023" title="网游" eid="click/navi/zuoce/classify1" eid_desc="点击/导航/左侧导航/classify1">
+                    <i style="background-image: url('//huyaimg.msstatic.com/cdnimage/sidebarNavGroup/phpz3aAZJ1488336152.png');"></i>
+                    <span class="sidebar-title">网游</span>
+                </a>
+            </li>
+                        <li class="sidebar-icon-item ">
+                <a class="sidebar-icon-link clickstat" href="http://www.huya.com/g/100002" title="单机" eid="click/navi/zuoce/classify2" eid_desc="点击/导航/左侧导航/classify2">
+                    <i style="background-image: url('//huyaimg.msstatic.com/cdnimage/sidebarNavGroup/phpuKzEv31488336851.png');"></i>
+                    <span class="sidebar-title">单机</span>
+                </a>
+            </li>
+                        <li class="sidebar-icon-item ">
+                <a class="sidebar-icon-link clickstat" href="http://www.huya.com/g/100022" title="娱乐" eid="click/navi/zuoce/classify3" eid_desc="点击/导航/左侧导航/classify3">
+                    <i style="background-image: url('//huyaimg.msstatic.com/cdnimage/sidebarNavGroup/phpNhPhI81488336174.png');"></i>
+                    <span class="sidebar-title">娱乐</span>
+                </a>
+            </li>
+                        <li class="sidebar-icon-item ">
+                <a class="sidebar-icon-link clickstat" href="http://www.huya.com/g/100004" title="手游" eid="click/navi/zuoce/classify4" eid_desc="点击/导航/左侧导航/classify4">
+                    <i style="background-image: url('//huyaimg.msstatic.com/cdnimage/sidebarNavGroup/phpJAXeoz1488336183.png');"></i>
+                    <span class="sidebar-title">手游</span>
+                </a>
+            </li>
+                    </ul>
+        <span id="sidebar-show-btn" class="arrow-btn clickstat" eid="click/navi/zuoce/open" eid_desc="点击/导航/左侧导航/展开"></span>
+        <a target="_blank" class="sidebar-icon-author" href="http://www.huya.com/e/zhubo">
+>>>>>>> 858bef804ab34b51ea944707a6ab200ee50ba49e
+            <i></i>
+            <span>开直播</span>
+>>>>>>> affc5825f367cf28b82e23b5a4740cb6f7372d16
         </a>
         <div class="nav-expand-list nav-expand-history">
             <i class="arrow"></i>
@@ -179,8 +304,12 @@
                         <a class="topup new-clickstat" target="_blank" href="http://i.huya.com/?evt=recharge" report="{&quot;eid&quot;:&quot;click/position&quot;,&quot;position&quot;:&quot;header/usercard/recharge&quot;}">充值</a>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div class="u-task loading" id="J_huyaNavUserCardTask">
                 </div>
+=======
+<<<<<<< HEAD
+>>>>>>> affc5825f367cf28b82e23b5a4740cb6f7372d16
                 <div class="u-links">
                     <ul>
                         <li class="links-i">
@@ -209,6 +338,44 @@
                             </a>
                         </li>
                     </ul>
+<<<<<<< HEAD
+=======
+=======
+                                                                <div class="m sidebar-show-line">
+                    <a class="m-title clickstat" href="http://www.huya.com/g/100004" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4">
+                        <i class="m-title-type" style="background-image: url('//huyaimg.msstatic.com/cdnimage/sidebarNavGroup/phpJAXeoz1488336183.png');"></i>
+                        <span class="m-title-span">手游休闲</span>
+                    </a>
+                    <div class="m-bd">
+                        <div class="recomend-list clearfix">
+                               
+                            <a class="recomend-item clickstat" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4" href="http://www.huya.com/g/2336" title="王者荣耀">王者荣耀</a>            
+                               
+                            <a class="recomend-item clickstat" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4" href="http://www.huya.com/g/100064" title="吃鸡手游">吃鸡手游</a>            
+                               
+                            <a class="recomend-item clickstat" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4" href="http://www.huya.com/g/100052" title="本周新游">本周新游</a>            
+                               
+                            <a class="recomend-item clickstat" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4" href="http://www.huya.com/g/2411" title="球球大作战">球球大作战</a>            
+                               
+                            <a class="recomend-item clickstat" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4" href="http://www.huya.com/g/2413" title="CF手游">CF手游</a>            
+                               
+                            <a class="recomend-item clickstat" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4" href="http://www.huya.com/g/100029" title="综合手游">综合手游</a>            
+                               
+                            <a class="recomend-item clickstat" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4" href="http://www.huya.com/g/100049" title="狼人杀专区">狼人杀专区</a>            
+                               
+                            <a class="recomend-item clickstat" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4" href="http://www.huya.com/g/100036" title="棋牌休闲">棋牌休闲</a>            
+                               
+                            <a class="recomend-item clickstat" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4" href="http://www.huya.com/g/100048" title="卡牌手游">卡牌手游</a>            
+                               
+                            <a class="recomend-item clickstat" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4" href="http://www.huya.com/g/2683" title="迷你世界">迷你世界</a>            
+                               
+                            <a class="recomend-item clickstat" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4" href="http://www.huya.com/g/2429" title="火影忍者">火影忍者</a>            
+                               
+                            <a class="recomend-item clickstat" eid="click/navi/zuoce/remen4" eid_desc="点击/导航/左侧导航/热门4" href="http://www.huya.com/g_sy" title="全部">全部</a>            
+                                                </div>
+                    </div>
+>>>>>>> 858bef804ab34b51ea944707a6ab200ee50ba49e
+>>>>>>> affc5825f367cf28b82e23b5a4740cb6f7372d16
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 
 
-    <div class="more-loading">
+ <!--    <div class="more-loading">
         <i class="icon-loading"></i>
         <em class="seo-loading">加载中...</em>
     </div>
@@ -9,7 +9,7 @@
         <i class="icon-empty"></i>
         <span class="seo-none">暂时没有相关直播间</span>
     </div>
-</div>
+</div> -->
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
     <div class="sidebar-hide">
         <ul class="sidebar-icon-list">
             <li class="sidebar-icon-item">
-                <a class="sidebar-icon-link clickstat js-sub" href="" title="订阅" target="_blank" eid="click/navi/zuoce/sub" eid_desc="点击/导航/左侧导航/我的订阅">
+                <a href="{{Url('login/login')}}" title="订阅" target="_blank" eid="click/navi/zuoce/sub" eid_desc="点击/导航/左侧导航/我的订阅">
                     <i class="sidebar-icon-sub"></i>
                     <span class="sidebar-title">订阅</span>
                 </a>
@@ -74,7 +74,9 @@
 
 
         <div class="jspContainer" style="width: 240px; height: 605px;"><div class="jspPane" style="top: 0px; width: 232px;"><div class="sidebar-show-nav">
-                <a href="http://i.huya.com/index.php?m=Subscribe" class="clickstat sidebar-show-line js-sub" target="_blank" eid="click/navi/zuoce/sub" eid_desc="点击/导航/左侧导航/我的订阅"><i class="sidebar-icon-sub"></i>我的订阅<span class="subscribe-text"> (请登录)</span></a>
+                <a role="button"   data-category="UserAccount" data-action="login" data-toggle="modal" href="#login-modal"><i class="sidebar-icon-sub"></i>我的订阅<span class="subscribe-text"> (请登录)</span></a>
+
+
                 <a href="http://www.huya.com/l" class="clickstat sidebar-show-line on" eid="click/navi/zuoce/live" eid_desc="点击/导航/左侧导航/全部直播"><i class="sidebar-icon-live"></i> 全部直播</a>
                 <a href="http://www.huya.com/g" class="clickstat sidebar-show-line" eid="click/navi/zuoce/gametype" eid_desc="点击/导航/左侧导航/全部游戏"><i class="sidebar-icon-type"></i>全部分类</a>
             </div><div class="sidebar-recom">
@@ -248,3 +250,122 @@ var _hmt = _hmt || [];
 
 
 </body></html>
+
+
+
+
+<!-- 
+<script type="text/javascript" src="{{URL::asset('public/js/jquery2.2.2.min.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('public/js/modal.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('public/js/script.js')}}"></script>
+ -->
+
+
+
+<script src="{{URL::asset('public/static/js/landing-min.js?2013032917')}}"></script>
+<body class="land-bg">
+      <div class="modal in" id="login-modal" }> <a class="close" data-dismiss="modal">×</a>
+        <h1>登录</h1>
+        <ul class="login-bind-tp">
+          <li class="qweibo"> <a href="http://sc.chinaz.com"><em>&nbsp;</em> QQ登录</a> </li>
+          <li class="sina"> <a href="http://sc.chinaz.com"><em>&nbsp;</em> 微博登录</a> </li>
+          <li class="douban"> <a href="http://sc.chinaz.com"><em>&nbsp;</em> 豆瓣登录</a> </li>
+        </ul>
+        <p>或者使用已有帐号登陆：</p>
+        <form class="login-form clearfix" method="post" action="http://sc.chinaz.com">
+          <div class="form-arrow"></div>
+          <input name="email" type="text" placeholder="邮箱：">
+          <input name="password" type="password" placeholder="密码：">
+          <input type="submit" name="type" class="button-blue login" value="登录">
+          <input type="hidden" name="return-url" value="">
+          <div class="clearfix"></div>
+          <label class="remember">
+          <input name="remember" type="checkbox" checked/>
+          下次自动登录 </label>
+          <a class="forgot">忘记密码？</a>
+          <ul class="third-parties">
+            <li>
+              <p data-url="">新浪微博帐号</p>
+            </li>
+            <li>
+              <p data-url="">腾讯微博帐号</p>
+            </li>
+            <li>
+              <p data-url="">豆瓣帐号</p>
+            </li>
+            <li>
+              <p data-url=""></p>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal in" id="signup-modal" > <a class="close" data-dismiss="modal">×</a>
+  <h1>注册</h1>
+  <ul class="login-bind-tp">
+    <li class="qweibo"> <a href="http://sc.chinaz.com"><em>&nbsp;</em> QQ登录</a> </li>
+    <li class="sina"> <a href="http://sc.chinaz.com"><em>&nbsp;</em> 微博登录</a> </li>
+    <li class="douban"> <a href="http://sc.chinaz.com"><em>&nbsp;</em> 微信登录</a> </li>
+  </ul>
+  <p>或者使用邮箱注册：</p>
+  <form class="signup-form clearfix" method="post" action="login/login">
+    <p class="error"></p>
+    <input name="email" type="text" placeholder="邮箱：">
+    <input name="password" type="password" placeholder="密码：">
+    <input name="password1" type="password" placeholder="确认密码：">
+    <input name="username" type="text" placeholder="用户名：">
+    <input type="hidden" name="title" value="">
+    <input type="hidden" name="url">
+    <div class="clearfix"></div>
+    <input type="button" name="type" class="button-blue reg" value="注册" data-category="UserAccount" data-action="regist">
+    <ul class="third-parties">
+      <li>
+        <p data-url="">新浪微博帐号</p>
+      </li>
+      <li>
+        <p data-url="">腾讯微博帐号</p>
+      </li>
+      <li>
+        <p data-url="">豆瓣帐号</p>
+      </li>
+      <li>
+        <p data-url=""></p>
+      </li>
+    </ul>
+  </form>
+</div>
+<div class="modal in" id="forgetform"> <a class="close" data-dismiss="modal">×</a>
+  <h1>忘记密码</h1>
+  <form class="forgot-form" method="post" action="http://sc.chinaz.com">
+    <input name="email" value="" placeholder="注册邮箱：">
+    <div class="clearfix"></div>
+    <input type="submit" name="type" class="forgot button-blue" value="发送重设密码邮件">
+  </form>
+</div>
+<div class="modal in" id="activation-modal" style="display:none"}> <a class="close" data-dismiss="modal">×</a>
+  <h1>设置用户信息</h1>
+  <form class="signup-form clearfix" method="post" action="http://sc.chinaz.com">
+    <input autocomplete=off name="username" value="" placeholder="用户名：">
+    <input autocomplete=off name="password" type="password" placeholder="密码：">
+    <input autocomplete=off name="password2" type="password" placeholder="确认密码：">
+    <input type="submit" name="type" class="button-blue reg" value="确认并登录" data-category="UserAccount" data-action="regist">
+    <div class="clearfix"></div>
+  </form>
+</div>
+<div class="modal in" id="setpassword-modal" style="display:none"}> <a class="close" data-dismiss="modal">×</a>
+  <h1>重置密码</h1>
+  <form class="signup-form clearfix" method="post" action="http://sc.chinaz.com">
+    <input name="email" value="">
+    <input name="password" type="password" placeholder="密码：">
+    <input name="password2" type="password" placeholder="确认密码：">
+    <input name="token" type="hidden" value="">
+    <input type="submit" name="type" class="button-blue reg" value="设置新密码并登录" data-category="UserAccount" data-action="reset">
+    <div class="clearfix"></div>
+  </form>
+</div>
+
+
+</body>

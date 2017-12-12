@@ -58,7 +58,7 @@ use yii\helpers\Url;
 
 					<div class="clearfix form-actions">
 						<div class="col-md-offset-3 col-md-9">
-							
+
 							<?= Html::submitButton('添加分类', ['class' => 'btn btn-info']) ?>
 							&nbsp; &nbsp; &nbsp;
 							<button class="btn" type="reset">
