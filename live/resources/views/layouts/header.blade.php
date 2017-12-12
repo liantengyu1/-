@@ -2,14 +2,16 @@
     <meta charset="utf-8">
 <title>在线直播_全部游戏直播_网络游戏直播&nbsp;-&nbsp;虎牙直播</title>
 <meta name="renderer" content="webkit">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="热门游戏直播,高清游戏直播平台,电竞赛事直播,单机游戏直播,lol直播,dnf直播,吃货直播,娱乐直播厅,美女直播厅,电视台节目,虎牙直播huya">
 <meta name="Description" content="虎牙直播为您提供高清、流畅的视频直播和各种游戏赛事的直播平台，除了英雄联盟lol直播、地下城与勇士dnf直播、穿越火线cf直播等热门游戏直播，更有美女直播厅、电视台节目、娱乐美女直播厅等24小时免费的在线直播内容。">
 
+<link rel="stylesheet" type="text/css" href="{{URL::asset('public/static/css/ui2.css?2013032917')}}">
+
 <link rel="canonical" href="http://www.huya.com/l">
-    <link type="text/css" rel="stylesheet" href="../../extend/css/pages_modules_c10f635.css">
-<link type="text/css" rel="stylesheet" href="../../extend/css/auto_combine_5ce4a_e25fcb7.css">
+    <link type="text/css" rel="stylesheet" href="{{URL::asset('public/extend/css/pages_modules_c10f635.css')}}">
+<link type="text/css" rel="stylesheet" href="{{URL::asset('public/extend/css/auto_combine_5ce4a_e25fcb7.css')}}">
 <!--HEAD_END-->
      <script data-fixed="true">!function(n){n.loadScript(["//szhuodong.duowan.com/feq/huya/yy-f2e-header-huya.min"])}(function(){function n(n){var e=t(n);document.write(e)}function t(n){for(var t,r="",c=0;t=n[c];c++)r+=e(t);return r}function e(n){var t=[unescape("%3Cscript%20type%3D%22text/javascript%22%20src%3D%22"),"",unescape("%22%3E%3C/script%3E")],e=new Date;return e.setSeconds(0),e.setMilliseconds(0),e=e.getTime(),n+="?t_="+e,t[1]=n,t.join("")}return{loadScript:function(t){t&&t.length&&t instanceof Array&&n(t)}}}());</script>
     <script data-fixed="true">
@@ -120,7 +122,7 @@
                         <i class="icon-loading"></i>
                         <em>正在加载您的历史...</em>
                     </div>
-                </div>                            
+                </div>
             </div>
             <a href="http://i.huya.com/index.php?m=Subscribe&amp;watch=1" class="nav-expand-history-more J_gNavLogin" style="display:none" target="_blank">更多&gt;</a>
         </div>
@@ -181,7 +183,7 @@
                 <div class="u-links">
                     <ul>
                         <li class="links-i">
-                            <a href="http://i.huya.com/" target="_blank" class="new-clickstat" report="{&quot;eid&quot;:&quot;click/position&quot;,&quot;position&quot;:&quot;header/usercard/entrance1&quot;}">                                        
+                            <a href="http://i.huya.com/" target="_blank" class="new-clickstat" report="{&quot;eid&quot;:&quot;click/position&quot;,&quot;position&quot;:&quot;header/usercard/entrance1&quot;}">
                                 <i></i>
                                 <p>个人中心</p>
                             </a>

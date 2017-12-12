@@ -22,8 +22,6 @@ Route::get('show', function () {
 
 });
 
-Route::get('login', function () {
 
-    return view('login/login');
+Route::get('login/login','LoginController@login');
 
-});
